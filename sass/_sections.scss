@@ -1,0 +1,22 @@
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title-wrap {
+  max-width: 550px;
+  margin: 100px auto;
+}
+
+// SECTION 2 - FEATURES
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+  text-align: center;
+}
+
+.s1-content-container {
+  display: flex;
+}

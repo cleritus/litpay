@@ -1,0 +1,48 @@
+main {
+  position: relative;
+  height: 870px;
+
+  .bg-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 562px;
+    width: 280.08px;
+    opacity: 0.8;
+    background-image: url('../images/bg_left.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .bg-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 628.44px;
+    width: 304.09px;
+    opacity: 0.8;
+    background-image: url('../images/bg_right.png');
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .banner-area {
+    display: flex;
+    padding: 60px 0;
+
+    h1 {
+      font-size: 46px;
+      font-weight: bold;
+      line-height: 60px;
+      margin: 20px 0;
+    }
+
+    p {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 18px;
+      line-height: 28px;
+      margin: 30px 0 40px;
+    }
+  }
+}

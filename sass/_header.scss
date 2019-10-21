@@ -8,21 +8,24 @@
 
     .nav-primary-ul {
       display: flex;
+      margin-left: 0;
       padding-left: 0;
 
       li {
-        padding-left: 50px;
+        margin-left: 50px;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        transition: .2s;
       }
 
       :nth-child(1) {
-        padding: 0;
+        margin-left: 0;
+      }
+
+      li:hover {
+        color: $blue;
+        border-color: #F66385;
       }
     }
   }
-}
-
-h1 {
-  font-size: 46px;
-  font-weight: bold;
-  line-height: 60px;
 }

@@ -6,6 +6,7 @@ body {
           box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: #7E879F;
+  cursor: default;
 }
 
 .container {
@@ -53,7 +54,58 @@ h2,
 h3,
 h4 {
   color: #436DD8;
-  font-family: "Brandon Grotesque", 'Roboto', sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
+}
+
+main {
+  position: relative;
+  height: 870px;
+}
+
+main .bg-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 562px;
+  width: 280.08px;
+  opacity: 0.8;
+  background-image: url("../images/bg_left.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+main .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 628.44px;
+  width: 304.09px;
+  opacity: 0.8;
+  background-image: url("../images/bg_right.png");
+  background-size: cover;
+  z-index: -1;
+}
+
+main .banner-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0;
+}
+
+main .banner-area h1 {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 60px;
+  margin: 20px 0;
+}
+
+main .banner-area p {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 30px 0 40px;
 }
 
 .header-top {
@@ -76,20 +128,53 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 0;
   padding-left: 0;
 }
 
 .header-top .nav-primary .nav-primary-ul li {
-  padding-left: 50px;
+  margin-left: 50px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .header-top .nav-primary .nav-primary-ul :nth-child(1) {
-  padding: 0;
+  margin-left: 0;
 }
 
-h1 {
-  font-size: 46px;
+.header-top .nav-primary .nav-primary-ul li:hover {
+  color: #436DD8;
+  border-color: #F66385;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.title-wrap {
+  max-width: 550px;
+  margin: 100px auto;
+}
+
+h2 {
+  font-size: 40px;
   font-weight: bold;
-  line-height: 60px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.s1-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

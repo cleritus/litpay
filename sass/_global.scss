@@ -9,6 +9,7 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: $grey;
+  cursor: default;
 }
 
 .container {
@@ -22,7 +23,6 @@ li {
   font-family: 'Brandon Grotesque', 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 26px;
-  // padding-left: 40px;
 }
 
 a {
@@ -56,5 +56,5 @@ h2,
 h3,
 h4 {
   color: $blue;
-  font-family: "Brandon Grotesque", 'Roboto', sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
 }
