@@ -1,0 +1,28 @@
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav-primary {
+    padding: 78px 0;
+
+    .nav-primary-ul {
+      display: flex;
+      padding-left: 0;
+
+      li {
+        padding-left: 50px;
+      }
+
+      :nth-child(1) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 60px;
+}
