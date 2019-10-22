@@ -1,22 +1,122 @@
-section {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .title-wrap {
   max-width: 550px;
   margin: 100px auto;
 }
 
-// SECTION 2 - FEATURES
 h2 {
   font-size: 40px;
   font-weight: bold;
   line-height: 48px;
   text-align: center;
+
+  span {
+    font-style: italic;
+    font-weight: thin;
+  }
 }
+
+// SECTION 2 - FEATURES
 
 .s1-content-container {
   display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 140px;
+      width: 140px;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+      box-shadow: 0 10px 35px 0 rgba(26, 55, 139, 0.1);
+    }
+
+    h4 {
+      height: 24px;
+      width: 192px;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+      margin: 40px 0 30px;
+    }
+
+    p {
+      height: 82px;
+      width: 310px;
+      margin: 0;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}
+
+// SECTION 3 - PRODUCTS
+
+section.products {
+  position: relative;
+  margin-top: 200px;
+  padding: 100px 0;
+
+  .bg-transform {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 150%;
+    height: 100%;
+    transform: rotate(-5deg);
+    background-color: #F8F9FF;
+    z-index: -1;
+  }
+
+  .article-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 200px 0;
+
+    .article-content {
+      width: 470px;
+      text-align: left;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+      }
+
+      p {
+        font-family: "Proxima Nova", sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $blue;
+        font-family: 'Proxima Nova', 'Roboto';
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.47px;
+        cursor: pointer;
+        border-bottom: 1px solid $grey;
+      }
+    }
+
+  }
+
+  :nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
 }

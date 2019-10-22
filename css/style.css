@@ -9,6 +9,10 @@ body {
   cursor: default;
 }
 
+.wrap {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -20,15 +24,6 @@ li {
   font-family: 'Brandon Grotesque', 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 26px;
-}
-
-a {
-  text-decoration: none;
-  color: #436DD8;
-  font-family: 'Proxima Nova', 'Roboto';
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.47px;
 }
 
 button {
@@ -47,6 +42,7 @@ button {
   letter-spacing: 0.65px;
   line-height: 16px;
   text-align: center;
+  cursor: pointer;
 }
 
 h1,
@@ -66,7 +62,7 @@ main .bg-left {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 562px;
+  height: 65%;
   width: 280.08px;
   opacity: 0.8;
   background-image: url("../images/bg_left.png");
@@ -79,7 +75,7 @@ main .bg-right {
   position: absolute;
   top: 0;
   right: 0;
-  height: 628.44px;
+  height: 75%;
   width: 304.09px;
   opacity: 0.8;
   background-image: url("../images/bg_right.png");
@@ -149,17 +145,6 @@ main .banner-area p {
   border-color: #F66385;
 }
 
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-
 .title-wrap {
   max-width: 550px;
   margin: 100px auto;
@@ -172,9 +157,137 @@ h2 {
   text-align: center;
 }
 
+h2 span {
+  font-style: italic;
+  font-weight: thin;
+}
+
 .s1-content-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.s1-content-container .feature-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s1-content-container .feature-content .feature-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 10px 35px 0 rgba(26, 55, 139, 0.1);
+          box-shadow: 0 10px 35px 0 rgba(26, 55, 139, 0.1);
+}
+
+.s1-content-container .feature-content h4 {
+  height: 24px;
+  width: 192px;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 40px 0 30px;
+}
+
+.s1-content-container .feature-content p {
+  height: 82px;
+  width: 310px;
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+section.products {
+  position: relative;
+  margin-top: 200px;
+  padding: 100px 0;
+}
+
+section.products .bg-transform {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 150%;
+  height: 100%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  background-color: #F8F9FF;
+  z-index: -1;
+}
+
+section.products .article-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 200px 0;
+}
+
+section.products .article-row .article-content {
+  width: 470px;
+  text-align: left;
+}
+
+section.products .article-row .article-content h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+}
+
+section.products .article-row .article-content p {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+section.products .article-row .article-content a {
+  text-decoration: none;
+  color: #436DD8;
+  font-family: 'Proxima Nova', 'Roboto';
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.47px;
+  cursor: pointer;
+  border-bottom: 1px solid #7E879F;
+}
+
+section.products :nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 /*# sourceMappingURL=style.css.map */
