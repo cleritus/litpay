@@ -45,6 +45,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#72A8FF), to(#3165EA));
+  background: linear-gradient(270deg, #72A8FF 0%, #3165EA 100%);
+}
+
 h1,
 h2,
 h3,
@@ -63,7 +68,7 @@ main .bg-left {
   bottom: 0;
   left: 0;
   height: 65%;
-  width: 280.08px;
+  width: 280px;
   opacity: 0.8;
   background-image: url("../images/bg_left.png");
   background-size: cover;
@@ -76,7 +81,7 @@ main .bg-right {
   top: 0;
   right: 0;
   height: 75%;
-  width: 304.09px;
+  width: 304px;
   opacity: 0.8;
   background-image: url("../images/bg_right.png");
   background-size: cover;
@@ -120,7 +125,7 @@ main .banner-area p {
   padding: 78px 0;
 }
 
-.header-top .nav-primary .nav-primary-ul {
+.nav-ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,7 +133,7 @@ main .banner-area p {
   padding-left: 0;
 }
 
-.header-top .nav-primary .nav-primary-ul li {
+.nav-ul li {
   margin-left: 50px;
   border-bottom: 2px solid transparent;
   cursor: pointer;
@@ -136,11 +141,11 @@ main .banner-area p {
   transition: .2s;
 }
 
-.header-top .nav-primary .nav-primary-ul :nth-child(1) {
+.nav-ul :nth-child(1) {
   margin-left: 0;
 }
 
-.header-top .nav-primary .nav-primary-ul li:hover {
+.nav-ul li:hover {
   color: #436DD8;
   border-color: #F66385;
 }
@@ -164,6 +169,18 @@ h2 span {
 
 p {
   font-family: "Proxima Nova", sans-serif;
+}
+
+.bg-transform {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 150%;
+  height: 100%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  background-color: #F8F9FF;
+  z-index: -1;
 }
 
 .s1-content-container {
@@ -232,18 +249,6 @@ section.products {
   position: relative;
   margin-top: 150px;
   padding: 100px 0 1px;
-}
-
-section.products .bg-transform {
-  position: absolute;
-  top: 0;
-  left: -200px;
-  width: 150%;
-  height: 100%;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
-  background-color: #F8F9FF;
-  z-index: -1;
 }
 
 section.products .article-row {
@@ -346,5 +351,143 @@ section.team .s3-content-container .box .person-position {
   font-family: "Proxima Nova", sans-serif;
   font-size: 15px;
   line-height: 30px;
+}
+
+section.contact {
+  position: relative;
+  margin: 150px 0;
+  padding: 150px 0;
+}
+
+section.contact .contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.contact .contact-content .form .inputs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 770px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.contact .contact-content .form .inputs-container input.input {
+  height: 55px;
+  width: 350px;
+  border-radius: 3px;
+  border: 1px solid #eeeeee;
+  margin-bottom: 15px;
+  text-indent: 20px;
+  color: #7E879F;
+}
+
+section.contact .contact-content .form .inputs-container .input:hover {
+  border-color: #7E879F;
+}
+
+section.contact .contact-content .form .textarea {
+  height: 110px;
+  width: 100%;
+  border: 1px solid #EEEEEE;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  padding: 18px 0;
+  text-indent: 20px;
+  color: #7E879F;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+section.contact .contact-content .contact-img {
+  margin-left: 80px;
+}
+
+section.contact .inputs input {
+  height: 55px;
+  width: 370px;
+}
+
+footer {
+  position: relative;
+}
+
+footer .footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+footer .footer-top .adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer-top .adress span {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  padding-bottom: 17px;
+}
+
+footer .footer-top .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer .footer-top .media img {
+  padding-left: 20px;
+}
+
+footer p {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+footer .footer-bg-left {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  height: 122px;
+  width: 267px;
+  opacity: 0.8;
+  background-image: url("../images/bg_footer_left.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+footer .footer-bg-right {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  height: 193px;
+  width: 197px;
+  opacity: 0.8;
+  background-image: url("../images/bg_footer_right.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

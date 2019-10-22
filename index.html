@@ -20,7 +20,7 @@
         </div>
 
         <nav class="nav-primary">
-          <ul class="nav-primary-ul">
+          <ul class="nav-ul">
             <li>home</li>
             <li>features</li>
             <li>products</li>
@@ -211,37 +211,69 @@
     </section>
 
     <section data-section="s4" class="contact">
+      <div class="bg-transform"></div>
       <div class="section-container container">
         <div class="title-wrap">
           <h2>Feel free to contact us</h2>
         </div>
 
         <div class="contact-content">
-          <form action="#">
-            <div class="inputs">
-              <input type="text" placeholder="Name">
-              <input type="text" placeholder="Last Name">
-              <input type="text" placeholder="Telephone">
-              <input type="text" placeholder="E-mail">
+          <form action="#" class="form">
+            <div class="inputs-container">
+              <input class="input" type="text" placeholder="Name">
+              <input class="input" type="text" placeholder="Last Name">
+              <input class="input" type="text" placeholder="Telephone">
+              <input class="input" type="text" placeholder="E-mail">
             </div>
 
-            <textarea name="comments" cols="30" rows="4" placeholder="Text your message here..."></textarea>
+            <textarea class="textarea" name="comments" cols="30" rows="4"
+              placeholder="Text your message here..."></textarea>
 
             <button type="submit">send message</button>
           </form>
-          <div class="contact-img"></div>
+
+          <div class="contact-img"><img src="./images/mailbox_img.png" alt="Mailbox image"></div>
         </div>
       </div>
     </section>
 
     <footer>
+      <div class="footer-bg-left"></div>
       <div class="footer-container container">
         <div class="footer-top">
+          <div class="adress">
+            <h4>Litpay sp. z o.o.</h4>
+            <span>ul. Bóżnicza 15/6 <br>
+              61-751 Poznań, Polska</span>
+            <span>REGON: 382609890 <br>
+              NIP: 7831797973 <br>
+              KRS 0000772632</span>
+            <span>Kapitał zakładowy 500.000,00 zł.</span>
+          </div>
 
+          <div>
+            <div class="nav-secondary">
+              <ul class="nav-ul">
+                <li>home</li>
+                <li>features</li>
+                <li>products</li>
+                <li>team</li>
+                <li>contact</li>
+              </ul>
+            </div>
+
+            <div class="media">
+              <a href="#"><img src="" alt="Facebook"></a>
+              <a href="#"><img src="" alt="Twitter"></a>
+              <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+              <a href="#"><img src="./images/youtube.png" alt="Youtube"></a>
+            </div>
+          </div>
         </div>
         <p><span class="copyrights">©  Litpay <script>document.write(new Date().getFullYear())</script></span>
         </p>
       </div>
+      <div class="footer-bg-right"></div>
     </footer>
 
   </div>

@@ -47,6 +47,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: linear-gradient(270deg, #72A8FF 0%, #3165EA 100%);
+}
+
 h1,
 h2,
 h3,
