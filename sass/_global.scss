@@ -12,6 +12,10 @@ body {
   cursor: default;
 }
 
+.wrap {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -23,15 +27,6 @@ li {
   font-family: 'Brandon Grotesque', 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 26px;
-}
-
-a {
-  text-decoration: none;
-  color: $blue;
-  font-family: 'Proxima Nova', 'Roboto';
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.47px;
 }
 
 button {
@@ -49,6 +44,7 @@ button {
   letter-spacing: 0.65px;
   line-height: 16px;
   text-align: center;
+  cursor: pointer;
 }
 
 h1,
