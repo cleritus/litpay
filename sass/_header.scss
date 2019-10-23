@@ -5,6 +5,20 @@
 
   .nav-primary {
     padding: 78px 0;
+
+    @media(max-width: 1024px) {
+      padding: 37px 0;
+    }
+
+    .burger {
+      display: none;
+      color: $white;
+      cursor: pointer;
+
+      @media(max-width: 1024px) {
+        display: block;
+      }
+    }
   }
 }
 
@@ -26,6 +40,10 @@
 
   li:hover {
     color: $blue;
-    border-color: #F66385;
+    border-color: $hoverMenu;
+  }
+
+  @media(max-width: 1024px) {
+    display: none;
   }
 }

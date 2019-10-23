@@ -18,6 +18,24 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 1280px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 668px;
+  }
+}
+
 li {
   text-transform: capitalize;
   list-style: none;
@@ -63,6 +81,12 @@ main {
   height: 870px;
 }
 
+@media (max-width: 1024px) {
+  main {
+    height: 100%;
+  }
+}
+
 main .bg-left {
   position: absolute;
   bottom: 0;
@@ -76,22 +100,31 @@ main .bg-left {
   z-index: 0;
 }
 
+@media (max-width: 1024px) {
+  main .bg-left {
+    display: none;
+  }
+}
+
 main .bg-right {
   position: absolute;
   top: 0;
   right: 0;
-  height: 75%;
-  width: 304px;
+  height: 80%;
+  width: 15%;
   opacity: 0.8;
-  background-image: url("../images/bg_right.png");
-  background-size: cover;
   z-index: -1;
 }
 
+@media (max-width: 1024px) {
+  main .bg-right {
+    width: 20%;
+    height: 100%;
+  }
+}
+
 main .banner-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
   padding: 60px 0;
 }
 
@@ -100,6 +133,13 @@ main .banner-area h1 {
   font-weight: bold;
   line-height: 60px;
   margin: 20px 0;
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  main .banner-area h1 {
+    width: 100%;
+  }
 }
 
 main .banner-area p {
@@ -107,6 +147,23 @@ main .banner-area p {
   font-size: 18px;
   line-height: 28px;
   margin: 30px 0 40px;
+  width: 50%;
+}
+
+main .banner-area .hero-banner {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+}
+
+main .banner-area .hero-banner img {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  main .banner-area .hero-banner {
+    top: 50%;
+  }
 }
 
 .header-top {
@@ -123,6 +180,24 @@ main .banner-area p {
 
 .header-top .nav-primary {
   padding: 78px 0;
+}
+
+@media (max-width: 1024px) {
+  .header-top .nav-primary {
+    padding: 37px 0;
+  }
+}
+
+.header-top .nav-primary .burger {
+  display: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .header-top .nav-primary .burger {
+    display: block;
+  }
 }
 
 .nav-ul {
@@ -150,9 +225,15 @@ main .banner-area p {
   border-color: #F66385;
 }
 
+@media (max-width: 1024px) {
+  .nav-ul {
+    display: none;
+  }
+}
+
 .title-wrap {
   max-width: 550px;
-  margin: 0 auto 100px;
+  margin: 0 auto 80px;
 }
 
 h2 {
@@ -160,6 +241,12 @@ h2 {
   font-weight: bold;
   line-height: 48px;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    margin-top: 0;
+  }
 }
 
 h2 span {
@@ -193,7 +280,8 @@ section.features {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .s1-content-container .feature-content {
@@ -210,6 +298,7 @@ section.features {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 30px;
 }
 
 .s1-content-container .feature-content .feature-icon {
@@ -237,7 +326,8 @@ section.features {
   font-size: 20px;
   font-weight: bold;
   line-height: 24px;
-  margin: 40px 0 30px;
+  margin: 30px 0 20px;
+  text-align: center;
 }
 
 .s1-content-container .feature-content p {
@@ -251,7 +341,7 @@ section.features {
 
 section.products {
   position: relative;
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 100px 0;
 }
 
@@ -266,6 +356,16 @@ section.products .article-row {
       -ms-flex-align: center;
           align-items: center;
   margin: 190px 0;
+}
+
+@media (max-width: 1024px) {
+  section.products .article-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0;
+  }
 }
 
 section.products .article-row .article-content {
@@ -300,6 +400,15 @@ section.products :nth-child(even) {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+@media (max-width: 1024px) {
+  section.products :nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 section.products :nth-child(4) {

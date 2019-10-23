@@ -19,6 +19,18 @@ body {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+
+  @media(max-width: 1280px) {
+    max-width: 980px;
+  }
+
+  @media(max-width: 1024px) {
+    max-width: 768px;
+  }
+
+  @media(max-width: 800px) {
+    max-width: 668px;
+  }
 }
 
 li {
