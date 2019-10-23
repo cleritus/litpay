@@ -1,6 +1,12 @@
 .title-wrap {
   max-width: 550px;
-  margin: 0 auto 100px;
+  margin: 0 auto 80px;
+  display: flex;
+  justify-content: center;
+
+  @media(max-width: 1024px) {
+    margin-bottom: 30px;
+  }
 }
 
 h2 {
@@ -8,15 +14,20 @@ h2 {
   font-weight: bold;
   line-height: 48px;
   text-align: center;
+  width: 476px;
+
+  @media(max-width: 1024px) {
+    margin-top: 0;
+  }
 
   span {
     font-style: italic;
-    font-weight: thin;
+    font-weight: normal;
   }
 }
 
 p {
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "Proxima-Nova", sans-serif;
 }
 
 // Rotated Background-color in section 2 (products) and 4 (contact)
@@ -42,14 +53,15 @@ section.features {
 .s1-content-container {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 100px;
-  // padding-top: 100px;
+  // margin-bottom: 100px;
+  flex-wrap: wrap;
 
   .feature-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 
     .feature-icon {
       display: flex;
@@ -65,11 +77,12 @@ section.features {
     h4 {
       height: 24px;
       width: 192px;
-      font-family: "Proxima Nova", sans-serif;
+      font-family: "Proxima-Nova", sans-serif;
       font-size: 20px;
       font-weight: bold;
       line-height: 24px;
-      margin: 40px 0 30px;
+      margin: 30px 0 20px;
+      text-align: center;
     }
 
     p {
@@ -87,8 +100,9 @@ section.features {
 
 section.products {
   position: relative;
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 100px 0;
+
 
   .article-row {
     display: flex;
@@ -96,9 +110,20 @@ section.products {
     align-items: center;
     margin: 190px 0;
 
+    @media(max-width: 1024px) {
+      flex-direction: column-reverse;
+      margin: 0 0 100px 0;
+    }
+
     .article-content {
       width: 470px;
       text-align: left;
+
+      @media(max-width:1024px) {
+        text-align: center;
+        max-width: 440px;
+        margin-bottom: 50px;
+      }
 
       h3 {
         font-size: 32px;
@@ -114,7 +139,7 @@ section.products {
       a {
         text-decoration: none;
         color: $blue;
-        font-family: 'Proxima Nova', 'Roboto';
+        font-family: 'Proxima-Nova', 'Roboto';
         font-size: 14px;
         font-weight: bold;
         letter-spacing: 0.47px;
@@ -126,6 +151,10 @@ section.products {
 
   :nth-child(even) {
     flex-direction: row-reverse;
+
+    @media(max-width: 1024px) {
+      flex-direction: column-reverse;
+    }
   }
 
   :nth-child(4) {
@@ -137,9 +166,17 @@ section.products {
 
 section.team {
   padding-top: 100px;
+  max-width: 1170px;
+  margin: 0 auto;
 
   .title-wrap {
+    flex-direction: column;
+    align-items: center;
     max-width: 770px;
+
+    @media(max-width: 1024) {
+      max-width: none;
+    }
 
     p {
       font-size: 16px;
@@ -151,6 +188,7 @@ section.team {
   .s3-content-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .box {
       display: flex;
@@ -165,14 +203,14 @@ section.team {
 
       .person-name {
         color: $blue;
-        font-family: "Proxima Nova", sans-serif;
+        font-family: "proxima-nova", sans-serif;
         font-size: 18px;
         font-weight: bold;
         line-height: 22px;
       }
 
       .person-position {
-        font-family: "Proxima Nova", sans-serif;
+        font-family: "proxima-nova", sans-serif;
         font-size: 15px;
         line-height: 30px;
       }
@@ -186,15 +224,29 @@ section.contact {
   margin: 150px 0;
   padding: 100px 0;
 
+  @media(max-width:1024px) {
+    margin-top: 100px;
+  }
+
   .contact-content {
     display: flex;
 
+    @media(max-width:1024px) {
+      justify-content: center;
+    }
+
+
     .form {
+
       .inputs-container {
         display: flex;
         flex-wrap: wrap;
         width: 770px;
         justify-content: space-between;
+
+        @media(max-width: 1280px) {
+          width: 100%;
+        }
 
         input.input {
           height: 55px;
@@ -204,6 +256,14 @@ section.contact {
           margin-bottom: 15px;
           text-indent: 20px;
           color: $grey;
+
+          @media(max-width: 1280px) {
+            width: 49%;
+          }
+
+          // @media(max-width: 1024px) {
+          //   width: 326px;
+          // }
         }
 
         .empty-input {
@@ -224,7 +284,7 @@ section.contact {
         padding: 18px 0;
         text-indent: 20px;
         color: $grey;
-        font-family: "Proxima Nova", sans-serif;
+        font-family: "proxima-nova", sans-serif;
         font-size: 14px;
         line-height: 22px;
       }
@@ -236,6 +296,14 @@ section.contact {
 
     .contact-img {
       margin-left: 80px;
+
+      @media(max-width:1280px) {
+        margin-left: 40px;
+      }
+
+      @media(max-width:1024px) {
+        display: none;
+      }
     }
   }
 }

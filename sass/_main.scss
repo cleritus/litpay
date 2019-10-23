@@ -2,11 +2,14 @@ main {
   position: relative;
   height: 870px;
 
+  @media(max-width:1024px) {
+    height: 100%;
+  }
+
   .bg-left {
     position: absolute;
     bottom: 0;
     left: 0;
-    // height: 562px;
     height: 65%;
     width: 280px;
     opacity: 0.8;
@@ -14,23 +17,29 @@ main {
     background-size: cover;
     background-position: center;
     z-index: 0;
+
+    @media(max-width: 1024px) {
+      display: none;
+    }
   }
 
   .bg-right {
     position: absolute;
     top: 0;
     right: 0;
-    // height: 628.44px;
-    height: 75%;
-    width: 304px;
+    height: 80%;
+    width: 15%;
     opacity: 0.8;
-    background-image: url('../images/bg_right.png');
-    background-size: cover;
     z-index: -1;
+
+    @media(max-width: 1024px) {
+      width: 20%;
+      height: 100%;
+    }
   }
 
   .banner-area {
-    display: flex;
+    position: relative;
     padding: 60px 0;
 
     h1 {
@@ -38,13 +47,37 @@ main {
       font-weight: bold;
       line-height: 60px;
       margin: 20px 0;
+      width: 560px;
+
+      @media(max-width: 1024px) {
+        width: 90%;
+      }
     }
 
     p {
-      font-family: "Proxima Nova", sans-serif;
+      font-family: "proxima-nova", sans-serif;
       font-size: 18px;
       line-height: 28px;
       margin: 30px 0 40px;
+      width: 540px;
+
+      @media(max-width: 1024px) {
+        width: 326px;
+      }
+    }
+
+    .hero-banner {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+
+      img {
+        width: 100%;
+      }
+
+      @media(max-width: 1024px) {
+        top: 50%;
+      }
     }
   }
 }

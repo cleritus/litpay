@@ -1,5 +1,5 @@
-// font-family: "Brandon Grotesque";
-//font-family: "Proxima Nova";
+// font-family: "brandon-grotesque";
+//font-family: "proxima-nova";
 //font-family: Roboto;
 
 body {
@@ -19,12 +19,24 @@ body {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+
+  @media(max-width: 1280px) {
+    max-width: 990px;
+  }
+
+  @media(max-width: 1024px) {
+    max-width: 768px;
+  }
+
+  @media(max-width: 800px) {
+    max-width: 668px;
+  }
 }
 
 li {
   text-transform: capitalize;
   list-style: none;
-  font-family: 'Brandon Grotesque', 'Roboto', sans-serif;
+  font-family: 'brandon-grotesque', 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
@@ -37,7 +49,7 @@ button {
   background: linear-gradient(270deg, #0565FF 0%, #0442DF 100%);
   box-shadow: 0 3px 10px 0 rgba(67, 109, 216, 0.25);
   color: $white;
-  font-family: "Proxima Nova", 'Roboto', sans-serif;
+  font-family: "proxima-nova", 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   // font-weight: bold;
@@ -56,5 +68,5 @@ h2,
 h3,
 h4 {
   color: $blue;
-  font-family: "Brandon Grotesque", sans-serif;
+  font-family: "brandon-grotesque", sans-serif;
 }
