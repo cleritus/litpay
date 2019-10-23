@@ -1,6 +1,6 @@
 .title-wrap {
   max-width: 550px;
-  margin: 100px auto;
+  margin: 0 auto 100px;
 }
 
 h2 {
@@ -35,10 +35,15 @@ p {
 
 // SECTION 1 - FEATURES
 
+section.features {
+  padding-top: 100px;
+}
+
 .s1-content-container {
   display: flex;
   justify-content: space-around;
   margin-bottom: 100px;
+  // padding-top: 100px;
 
   .feature-content {
     display: flex;
@@ -83,7 +88,7 @@ p {
 section.products {
   position: relative;
   margin-top: 150px;
-  padding: 100px 0 1px;
+  padding: 100px 0;
 
   .article-row {
     display: flex;
@@ -122,12 +127,16 @@ section.products {
   :nth-child(even) {
     flex-direction: row-reverse;
   }
+
+  :nth-child(4) {
+    margin-bottom: 0;
+  }
 }
 
 //SECTION 3 - TEAM
 
 section.team {
-  padding-top: 80px;
+  padding-top: 100px;
 
   .title-wrap {
     max-width: 770px;
@@ -175,7 +184,7 @@ section.team {
 section.contact {
   position: relative;
   margin: 150px 0;
-  padding: 150px 0;
+  padding: 100px 0;
 
   .contact-content {
     display: flex;
@@ -189,7 +198,7 @@ section.contact {
 
         input.input {
           height: 55px;
-          width: 350px;
+          width: 370px;
           border-radius: 3px;
           border: 1px solid #eeeeee;
           margin-bottom: 15px;
@@ -197,13 +206,13 @@ section.contact {
           color: $grey;
         }
 
+        .empty-input {
+          box-shadow: 0 0 2px 2px #E47474;
+        }
+
         .input:hover {
           border-color: $grey;
         }
-
-        // .input-active{
-        // border-color: $blue;
-        // }
       }
 
       .textarea {
@@ -219,17 +228,14 @@ section.contact {
         font-size: 14px;
         line-height: 22px;
       }
+
+      .textarea:hover {
+        border-color: $grey;
+      }
     }
 
     .contact-img {
       margin-left: 80px;
-    }
-  }
-
-  .inputs {
-    input {
-      height: 55px;
-      width: 370px;
     }
   }
 }

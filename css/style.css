@@ -152,7 +152,7 @@ main .banner-area p {
 
 .title-wrap {
   max-width: 550px;
-  margin: 100px auto;
+  margin: 0 auto 100px;
 }
 
 h2 {
@@ -181,6 +181,10 @@ p {
           transform: rotate(-5deg);
   background-color: #F8F9FF;
   z-index: -1;
+}
+
+section.features {
+  padding-top: 100px;
 }
 
 .s1-content-container {
@@ -248,7 +252,7 @@ p {
 section.products {
   position: relative;
   margin-top: 150px;
-  padding: 100px 0 1px;
+  padding: 100px 0;
 }
 
 section.products .article-row {
@@ -298,8 +302,12 @@ section.products :nth-child(even) {
           flex-direction: row-reverse;
 }
 
+section.products :nth-child(4) {
+  margin-bottom: 0;
+}
+
 section.team {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 section.team .title-wrap {
@@ -356,7 +364,7 @@ section.team .s3-content-container .box .person-position {
 section.contact {
   position: relative;
   margin: 150px 0;
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 section.contact .contact-content {
@@ -379,12 +387,17 @@ section.contact .contact-content .form .inputs-container {
 
 section.contact .contact-content .form .inputs-container input.input {
   height: 55px;
-  width: 350px;
+  width: 370px;
   border-radius: 3px;
   border: 1px solid #eeeeee;
   margin-bottom: 15px;
   text-indent: 20px;
   color: #7E879F;
+}
+
+section.contact .contact-content .form .inputs-container .empty-input {
+  -webkit-box-shadow: 0 0 2px 2px #E47474;
+          box-shadow: 0 0 2px 2px #E47474;
 }
 
 section.contact .contact-content .form .inputs-container .input:hover {
@@ -405,13 +418,12 @@ section.contact .contact-content .form .textarea {
   line-height: 22px;
 }
 
-section.contact .contact-content .contact-img {
-  margin-left: 80px;
+section.contact .contact-content .form .textarea:hover {
+  border-color: #7E879F;
 }
 
-section.contact .inputs input {
-  height: 55px;
-  width: 370px;
+section.contact .contact-content .contact-img {
+  margin-left: 80px;
 }
 
 footer {

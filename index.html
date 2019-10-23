@@ -12,7 +12,7 @@
 
 <body>
   <div class="wrap">
-    <main>
+    <main data-section="s0">
       <div class="bg-left"></div>
       <header class="header-top container">
         <div class="page-logo">
@@ -21,11 +21,11 @@
 
         <nav class="nav-primary">
           <ul class="nav-ul">
-            <li>home</li>
-            <li>features</li>
-            <li>products</li>
-            <li>team</li>
-            <li>contact</li>
+            <li class="s0">home</li>
+            <li class="s1">features</li>
+            <li class="s2">products</li>
+            <li class="s3">team</li>
+            <li class="s4">contact</li>
           </ul>
         </nav>
       </header>
@@ -229,7 +229,7 @@
             <textarea class="textarea" name="comments" cols="30" rows="4"
               placeholder="Text your message here..."></textarea>
 
-            <button type="submit">send message</button>
+            <button type="submit" class="submit-btn">send message</button>
           </form>
 
           <div class="contact-img"><img src="./images/mailbox_img.png" alt="Mailbox image"></div>
@@ -254,11 +254,11 @@
           <div>
             <div class="nav-secondary">
               <ul class="nav-ul">
-                <li>home</li>
-                <li>features</li>
-                <li>products</li>
-                <li>team</li>
-                <li>contact</li>
+                <li class="s0">home</li>
+                <li class="s1">features</li>
+                <li class="s2">products</li>
+                <li class="s3">team</li>
+                <li class="s4">contact</li>
               </ul>
             </div>
 
@@ -275,8 +275,11 @@
       </div>
       <div class="footer-bg-right"></div>
     </footer>
-
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
