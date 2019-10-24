@@ -197,6 +197,12 @@ main .banner-area .banner-content {
   padding-top: 200px;
 }
 
+@media (max-width: 1024px) {
+  main .banner-area .banner-content {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 768px) {
   main .banner-area .banner-content {
     display: -webkit-box;
@@ -268,7 +274,7 @@ main .banner-area .hero-banner img {
 
 @media (max-width: 1024px) {
   main .banner-area .hero-banner {
-    top: 50%;
+    top: 55%;
   }
 }
 
@@ -280,6 +286,7 @@ main .banner-area .hero-banner img {
 
 header {
   width: 100%;
+  height: 100px;
   max-width: 1920px;
   position: fixed;
   display: -webkit-box;
@@ -289,6 +296,8 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 2;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 header .header-top {
@@ -303,10 +312,6 @@ header .header-top {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: transparent;
-}
-
-header .header-top .nav-primary {
-  padding: 70px 0;
 }
 
 @media (max-width: 1024px) {
@@ -370,6 +375,13 @@ header .header-top .nav-primary .burger {
   .header-ul {
     display: none;
   }
+}
+
+.activeHead {
+  background-color: #ffffff;
+  height: 55px;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(138, 138, 138, 0.1);
+          box-shadow: 0 5px 5px 0 rgba(138, 138, 138, 0.1);
 }
 
 .title-wrap {

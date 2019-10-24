@@ -11,21 +11,26 @@ $('li').on('click', function () {
 
 // Stick nav on desktop
 
-// $(document).on("scroll", function () {
-//   const header = $('header');
-//   const scrollPosition = $(this).scrollTop();
-//   const headerHeight = $(header).outerHeight();
+$(document).on('scroll', function () {
+  const header = $('header');
+  const bgRight = document.querySelector('.bg-right');
+  const bgLeft = document.querySelector('.bg-left');
+  const scrollPosition = $(this).scrollTop();
+  const headerHeight = $(header).outerHeight();
 
-//   if (scrollPosition > headerHeight) {
-//     $(header).addClass("active");
-//   }
+  if (scrollPosition > headerHeight) {
+    $(header).addClass('activeHead');
+    bgRight.style.display = 'none';
+    bgLeft.style.display = 'none';
+  }
 
-//   console.log(scrollPosition, headerHeight);
-// // // CLEAR
-// if (scrollValue < headerHeight) {
-//   $("header").removeClass("active");
-// }
-// })
+  // CLEAR
+  if (scrollPosition < headerHeight) {
+    $(header).removeClass('activeHead');
+    bgRight.style.display = 'block';
+    bgLeft.style.display = 'block';
+  }
+})
 
 // Error when empty input
 
