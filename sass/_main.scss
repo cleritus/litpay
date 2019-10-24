@@ -37,9 +37,9 @@ main {
       height: 100%;
     }
 
-    // @media(max-width: 768px) {
-    //   display: none;
-    // }
+    @media(max-width: 768px) {
+      display: none;
+    }
   }
 
   .bg-right-mobile {
@@ -47,14 +47,22 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    height: 79px;
+    height: 25%;
     width: 25%;
     opacity: 0.8;
     z-index: -1;
 
-    // @media(max-width: 768px) {
-    //   display: block;
-    // }
+    @media(max-width: 768px) {
+      display: block;
+    }
+
+    @media(max-width: 540px) {
+      height: 20%;
+    }
+
+    @media(max-width: 400px) {
+      height: 15%;
+    }
   }
 
   .banner-area {
@@ -62,10 +70,12 @@ main {
     padding: 60px 0;
 
     @media(max-width: 768px) {
-      padding-bottom: 0;
+      padding: 20px 0 0 0;
     }
 
     .banner-content {
+      padding-top: 200px;
+
       @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
@@ -88,6 +98,7 @@ main {
         text-align: center;
         font-size: 36px;
         line-height: 44px;
+        margin-top: 0;
       }
     }
 
@@ -110,7 +121,7 @@ main {
 
     .hero-banner {
       position: absolute;
-      top: 50px;
+      top: 250px;
       left: 50%;
 
       img {

@@ -9,6 +9,24 @@ $('li').on('click', function () {
   })
 });
 
+// Stick nav on desktop
+
+// $(document).on("scroll", function () {
+//   const header = $('header');
+//   const scrollPosition = $(this).scrollTop();
+//   const headerHeight = $(header).outerHeight();
+
+//   if (scrollPosition > headerHeight) {
+//     $(header).addClass("active");
+//   }
+
+//   console.log(scrollPosition, headerHeight);
+// // // CLEAR
+// if (scrollValue < headerHeight) {
+//   $("header").removeClass("active");
+// }
+// })
+
 // Error when empty input
 
 const inputs = [...document.querySelectorAll('.input')];

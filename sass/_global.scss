@@ -35,6 +35,18 @@ body {
   @media(max-width: 768px) {
     max-width: 600px;
   }
+
+  @media(max-width: 640px) {
+    max-width: 480px;
+  }
+
+  @media(max-width: 540px) {
+    max-width: 360px;
+  }
+
+  @media(max-width: 400px) {
+    max-width: 280px;
+  }
 }
 
 li {
