@@ -10,6 +10,10 @@
       padding: 37px 0;
     }
 
+    @media(max-width: 768px) {
+      padding: 30px 0;
+    }
+
     .burger {
       display: none;
       color: $white;
@@ -17,6 +21,11 @@
 
       @media(max-width: 1024px) {
         display: block;
+      }
+
+      @media(max-width: 768px) {
+        height: 20px;
+        width: 26px;
       }
     }
   }
@@ -28,6 +37,7 @@
   padding-left: 0;
 
   li {
+    font-size: 18px;
     margin-left: 50px;
     border-bottom: 2px solid transparent;
     cursor: pointer;
@@ -42,7 +52,9 @@
     color: $blue;
     border-color: $hoverMenu;
   }
+}
 
+.header-ul {
   @media(max-width: 1024px) {
     display: none;
   }
