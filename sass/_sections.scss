@@ -20,6 +20,11 @@ h2 {
     margin-top: 0;
   }
 
+  @media(max-width: 768px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
   span {
     font-style: italic;
     font-weight: normal;
@@ -36,7 +41,7 @@ p {
   position: absolute;
   top: 0;
   left: -200px;
-  width: 150%;
+  width: 200%;
   height: 100%;
   transform: rotate(-5deg);
   background-color: #F8F9FF;
@@ -103,6 +108,11 @@ section.products {
   margin-top: 100px;
   padding: 100px 0;
 
+  @media(max-width: 768px) {
+    margin-top: 0;
+    padding-bottom: 80px;
+  }
+
 
   .article-row {
     display: flex;
@@ -115,6 +125,10 @@ section.products {
       margin: 0 0 100px 0;
     }
 
+    @media(max-width: 768px) {
+      margin: 0 0 80px 0;
+    }
+
     .article-content {
       width: 470px;
       text-align: left;
@@ -125,10 +139,20 @@ section.products {
         margin-bottom: 50px;
       }
 
+      @media(max-width:768px) {
+        margin-bottom: 30px;
+      }
+
       h3 {
         font-size: 32px;
         font-weight: 500;
         line-height: 42px;
+
+        @media(max-width:768px) {
+          font-size: 26px;
+          line-height: 34px;
+          margin-top: 0;
+        }
       }
 
       p {
@@ -219,6 +243,7 @@ section.team {
 }
 
 // SECTION 4 - CONTACT
+
 section.contact {
   position: relative;
   margin: 150px 0;
@@ -226,6 +251,10 @@ section.contact {
 
   @media(max-width:1024px) {
     margin-top: 100px;
+  }
+
+  @media(max-width:768px) {
+    margin-top: 0;
   }
 
   .contact-content {
@@ -237,6 +266,11 @@ section.contact {
 
 
     .form {
+      @media(max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
       .inputs-container {
         display: flex;
@@ -246,6 +280,12 @@ section.contact {
 
         @media(max-width: 1280px) {
           width: 100%;
+        }
+
+        @media(max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
 
         input.input {
@@ -261,9 +301,9 @@ section.contact {
             width: 49%;
           }
 
-          // @media(max-width: 1024px) {
-          //   width: 326px;
-          // }
+          @media(max-width: 768px) {
+            width: 100%;
+          }
         }
 
         .empty-input {
@@ -280,13 +320,17 @@ section.contact {
         width: 100%;
         border: 1px solid #EEEEEE;
         border-radius: 3px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         padding: 18px 0;
         text-indent: 20px;
         color: $grey;
         font-family: "proxima-nova", sans-serif;
         font-size: 14px;
         line-height: 22px;
+
+        @media(max-width: 768px) {
+          width: 70vw;
+        }
       }
 
       .textarea:hover {
