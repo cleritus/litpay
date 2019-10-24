@@ -118,9 +118,6 @@ main .bg-left {
   height: 65%;
   width: 280px;
   opacity: 0.8;
-  background-image: url("../images/bg_left.png");
-  background-size: cover;
-  background-position: center;
   z-index: 0;
 }
 
@@ -328,7 +325,8 @@ header .header-top {
 
 header .header-top .nav-primary .burger {
   display: none;
-  color: #ffffff;
+  height: 20px;
+  width: 26px;
   cursor: pointer;
 }
 
@@ -929,6 +927,10 @@ footer .footer-top .adress {
           flex-direction: column;
 }
 
+footer .footer-top .adress h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
 footer .footer-top .adress span {
   font-family: "proxima-nova", sans-serif;
   font-size: 14px;
@@ -1015,7 +1017,7 @@ footer .footer-bg-left {
   height: 122px;
   width: 267px;
   opacity: 0.8;
-  background-image: url("../images/bg_footer_left.png");
+  background-image: url("../images/bg/bg_footer_left.png");
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -1034,7 +1036,7 @@ footer .footer-bg-right {
   height: 193px;
   width: 197px;
   opacity: 0.8;
-  background-image: url("../images/bg_footer_right.png");
+  background-image: url("../images/bg/bg_footer_right.png");
   background-size: cover;
   background-position: center;
   z-index: -1;

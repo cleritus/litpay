@@ -13,22 +13,19 @@ $('li').on('click', function () {
 
 $(document).on('scroll', function () {
   const header = $('header');
-  const bgRight = document.querySelector('.bg-right');
-  const bgLeft = document.querySelector('.bg-left');
+  const burger = document.querySelector('.burger');
   const scrollPosition = $(this).scrollTop();
   const headerHeight = $(header).outerHeight();
 
   if (scrollPosition > headerHeight) {
     $(header).addClass('activeHead');
-    bgRight.style.display = 'none';
-    bgLeft.style.display = 'none';
+    burger.src = 'images/icons/burger_menu_dark.svg'
   }
 
   // CLEAR
   if (scrollPosition < headerHeight) {
     $(header).removeClass('activeHead');
-    bgRight.style.display = 'block';
-    bgLeft.style.display = 'block';
+    burger.src = 'images/icons/burger_menu.svg';
   }
 })
 

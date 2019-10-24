@@ -26,6 +26,10 @@ footer {
       display: flex;
       flex-direction: column;
 
+      h4 {
+        font-family: 'Roboto', sans-serif;
+      }
+
       span {
         font-family: "proxima-nova", sans-serif;
         font-size: 14px;
@@ -95,7 +99,7 @@ footer {
     height: 122px;
     width: 267px;
     opacity: 0.8;
-    background-image: url('../images/bg_footer_left.png');
+    background-image: url('../images/bg/bg_footer_left.png');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -112,7 +116,7 @@ footer {
     height: 193px;
     width: 197px;
     opacity: 0.8;
-    background-image: url('../images/bg_footer_right.png');
+    background-image: url('../images/bg/bg_footer_right.png');
     background-size: cover;
     background-position: center;
     z-index: -1;

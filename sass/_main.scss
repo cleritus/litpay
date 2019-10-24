@@ -13,9 +13,6 @@ main {
     height: 65%;
     width: 280px;
     opacity: 0.8;
-    background-image: url('../images/bg_left.png');
-    background-size: cover;
-    background-position: center;
     z-index: 0;
 
     @media(max-width: 1024px) {

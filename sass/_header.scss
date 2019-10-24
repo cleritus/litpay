@@ -27,7 +27,8 @@ header {
 
       .burger {
         display: none;
-        color: $white;
+        height: 20px;
+        width: 26px;
         cursor: pointer;
 
         @media(max-width: 1024px) {
