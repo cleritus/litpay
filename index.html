@@ -8,6 +8,8 @@
   <title>Litpay</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/woh5qbb.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -249,12 +251,18 @@
         </div>
 
         <div class="contact-content">
+          <div class="success-msg">
+            <h3>Success</h4>
+              <i class="fas fa-check"></i>
+              <p>Your message has been sent</p>
+          </div>
+
           <form action="#" class="form contact-form">
             <div class="inputs-container">
-              <input class="input" type="text" placeholder="Name">
-              <input class="input" type="text" placeholder="Last Name">
-              <input class="input" type="text" placeholder="Telephone">
-              <input class="input" type="text" placeholder="E-mail">
+              <input class="input" name="name" type="text" placeholder="Name">
+              <input class="input" name="last name" type="text" placeholder="Last Name">
+              <input class="input" name="telephone" type="text" placeholder="Telephone">
+              <input class="input" name='email' type="text" placeholder="E-mail">
             </div>
 
             <textarea class="textarea" name="comments" cols="30" rows="4"

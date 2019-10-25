@@ -47,8 +47,6 @@ const closeMenu = () => {
 burger.addEventListener('click', openMenu);
 burgerExit.addEventListener('click', closeMenu);
 
-
-
 // Error when empty input
 
 const inputs = [...document.querySelectorAll('.input')];
@@ -73,14 +71,20 @@ const onSubmitForm = (e) => {
   }
 
   // wysylanie post do serwera
-  $.post('http://litpay.pl', $('.contact-form').serialize())
-      .done(function (result) {
-        // wyswietlic success message - czyli ten div
-      })
-      .fail(function (result) {
-        alert('');
-      });
+
+  $.post('http://litpay.pl/send.php', $('.contact-form').serialize())
+    .done(function (result) {
+      document.querySelector('.form').style.display = 'none';
+      document.querySelector('.success-msg').classList.add('show');
+      document.querySelector('.contact-img').classList.toggle('hide');
+      document.querySelector('.contact-content').style.alignItems = 'center';
+
+    })
+    .fail(function (result) {
+      alert("Oops, something wrong. Can't send your message ");
+    });
 };
 
 submitBtn.addEventListener('click', onSubmitForm);
-// event listener na czyszczenie empty-input klasy
+
+inputs.forEach(input => input.addEventListener('keydown', () => input.classList.remove('empty-input')));

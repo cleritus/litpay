@@ -882,6 +882,29 @@ section.contact .contact-content .contact-img {
   }
 }
 
+.success-msg {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.success-msg h3 {
+  margin: 10px 0;
+  color: #29be6a;
+}
+
+.success-msg .fa-check {
+  color: #29be6a;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 footer {
   position: relative;
 }

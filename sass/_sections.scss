@@ -297,6 +297,7 @@ section.contact {
 
 
     .form {
+
       @media(max-width:768px) {
         display: flex;
         flex-direction: column;
@@ -381,4 +382,27 @@ section.contact {
       }
     }
   }
+}
+
+.success-msg {
+  display: none;
+  text-align: center;
+  width: 100%;
+
+  h3 {
+    margin: 10px 0;
+    color: rgb(41, 190, 106);
+  }
+
+  .fa-check {
+    color: rgb(41, 190, 106);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
