@@ -70,15 +70,12 @@ const onSubmitForm = (e) => {
     return;
   }
 
-  // wysylanie post do serwera
-
   $.post('http://litpay.pl/send.php', $('.contact-form').serialize())
     .done(function (result) {
       document.querySelector('.form').style.display = 'none';
       document.querySelector('.success-msg').classList.add('show');
       document.querySelector('.contact-img').classList.toggle('hide');
       document.querySelector('.contact-content').style.alignItems = 'center';
-
     })
     .fail(function (result) {
       alert("Oops, something wrong. Can't send your message ");
