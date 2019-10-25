@@ -18,7 +18,7 @@ $data = array(
     'subject' => 'Zapytanie ze strony od ' . htmlentities($_POST['name'] . ' ' . $_POST['surname']),
     'text' => ("Od: " . $_POST['name'] . ' ' . $_POST['surmame'] . "\nE-mail: " . $_POST['email'] . "\nNumer telefonu: " . $_POST['phone'] . "\n\n" . $_POST['message']),
     'from' => 'kontakt@litpay.pl',
-    'from_name' => 'Formularz',
+    'from_name' => 'Formularz ze strony litpay.pl',
     'reply_to' => $_POST['email']
 );
 
@@ -36,7 +36,7 @@ curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 //Pobieranie wyniku
 $result = curl_exec($curl);
-
+var_dump($result);
 //Wyświetlanie wyniku
 echo '1';
 exit;
