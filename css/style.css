@@ -382,6 +382,10 @@ header .header-top .nav-primary .burger {
           box-shadow: 0 5px 5px 0 rgba(138, 138, 138, 0.1);
 }
 
+.hideHead {
+  display: none;
+}
+
 .title-wrap {
   max-width: 550px;
   margin: 0 auto 80px;
@@ -1046,5 +1050,62 @@ footer .footer-bg-right {
   footer .footer-bg-right {
     display: none;
   }
+}
+
+.modal-bg {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #ffffff;
+  background-image: url("../images/bg/bg_mobile_nav.png");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  opacity: .9;
+  z-index: 3;
+}
+
+.modal-bg .modal-container {
+  max-width: 75vw;
+  margin: 0 auto;
+  padding: 30px 0;
+  height: 50%;
+}
+
+.modal-bg .modal-container .modal-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-bg .modal-container .modal-flex .burger-exit {
+  cursor: pointer;
+}
+
+.modal-bg .modal-container .modal-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 60%;
+  color: #ffffff;
+}
+
+.modal-bg .modal-container .modal-nav li {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,25 +9,45 @@ $('li').on('click', function () {
   })
 });
 
+
+const header = document.querySelector('header');
+const burger = document.querySelector('.burger');
+const burgerExit = document.querySelector('.burger-exit');
+const modalBg = document.querySelector('.modal-bg');
+
 // Stick nav on desktop
 
 $(document).on('scroll', function () {
-  const header = $('header');
-  const burger = document.querySelector('.burger');
   const scrollPosition = $(this).scrollTop();
   const headerHeight = $(header).outerHeight();
 
-  if (scrollPosition > headerHeight) {
+  if (scrollPosition > headerHeight / 2) {
     $(header).addClass('activeHead');
     burger.src = 'images/icons/burger_menu_dark.svg'
   }
 
-  // CLEAR
+  // Clear
+
   if (scrollPosition < headerHeight) {
     $(header).removeClass('activeHead');
     burger.src = 'images/icons/burger_menu.svg';
   }
 })
+
+// Modal nav
+const openMenu = () => {
+  header.classList.add('hideHead');
+  modalBg.style.display = 'block';
+}
+
+const closeMenu = () => {
+  header.classList.remove('hideHead');
+  modalBg.style.display = 'none';
+}
+burger.addEventListener('click', openMenu);
+burgerExit.addEventListener('click', closeMenu);
+
+
 
 // Error when empty input
 
