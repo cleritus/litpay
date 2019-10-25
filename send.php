@@ -36,7 +36,7 @@ curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 //Pobieranie wyniku
 $result = curl_exec($curl);
-var_dump($result);
+
 //Wyświetlanie wyniku
 echo '1';
 exit;
