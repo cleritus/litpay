@@ -54,22 +54,33 @@ burgerExit.addEventListener('click', closeMenu);
 const inputs = [...document.querySelectorAll('.input')];
 const submitBtn = document.querySelector('.submit-btn');
 
-const warning = (e) => {
+const onSubmitForm = (e) => {
   e.preventDefault();
+
+  let validationError = false;
   inputs.forEach(input => {
-
     if (input.value === '') {
-
-      const empty = inputs.find(input => input.value === "");
-      empty.classList.add('empty-input');
-      console.error('błąd');
-
-    } else if (input.value !== "") {
-      input.classList.remove('empty-input')
+      input.classList.add('empty-input');
+      validationError = true;
+      return;
     }
-  })
 
-  inputs.forEach(input => input.value = '')
-}
+    input.classList.remove('empty-input');
+  });
 
-submitBtn.addEventListener('click', warning);
+  if (validationError) {
+    return;
+  }
+
+  // wysylanie post do serwera
+  $.post('http://litpay.pl', $('.contact-form').serialize())
+      .done(function (result) {
+        // wyswietlic success message - czyli ten div
+      })
+      .fail(function (result) {
+        alert('');
+      });
+};
+
+submitBtn.addEventListener('click', onSubmitForm);
+// event listener na czyszczenie empty-input klasy
