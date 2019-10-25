@@ -38,4 +38,5 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($curl);
 
 //Wyświetlanie wyniku
-echo $result;
+echo '1';
+exit;
