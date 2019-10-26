@@ -1,20 +1,25 @@
-// Nav - Scroll to section
-
-$('li').on('click', function () {
-  console.log($(this).attr('class'));
-  const sectionName = $(this).attr('class');
-
-  $('body, html').animate({
-    scrollTop: $(`[data-section = ${sectionName}]`).offset().top + 80
-  })
-});
-
-
 const header = document.querySelector('header');
 const hamburger = document.querySelector('.hamburger');
 const burgerDark = document.querySelector('.burgerDark');
 const burgerExit = document.querySelector('.burger-exit');
 const modalBg = document.querySelector('.modal-bg');
+const headerDisplayNone = $('.header-ul').css('display');
+
+// Nav - Scroll to section
+
+$('li').on('click', function () {
+  const sectionName = $(this).attr('class');
+  modalBg.style.display = 'none';
+  $(header).removeClass('activeHead');
+  header.classList.remove('hideHead');
+
+
+  $('body, html').animate({
+    scrollTop: $(`[data-section = ${sectionName}]`).offset().top + 40
+  })
+
+
+});
 
 // Stick nav on desktop
 
@@ -22,15 +27,20 @@ $(document).on('scroll', function () {
   const scrollPosition = $(this).scrollTop();
   const headerHeight = $(header).outerHeight();
   let isActive = 0;
+  const headerDisplayNone = $('.header-ul').css('display');
 
   if ((scrollPosition > headerHeight / 2) && (isActive === 0)) {
     $(header).addClass('activeHead');
     hamburger.style.display = 'none';
-    burgerDark.style.display = 'block';
+
+    if (headerDisplayNone === 'none') {
+      burgerDark.style.display = 'block';
+    }
+
     isActive = 1;
   }
 
-  if (scrollPosition < headerHeight) {
+  if (scrollPosition < headerHeight / 2) {
     $(header).removeClass('activeHead');
     hamburger.style.display = 'block';
     burgerDark.style.display = 'none';
@@ -90,13 +100,3 @@ const onSubmitForm = (e) => {
 submitBtn.addEventListener('click', onSubmitForm);
 
 inputs.forEach(input => input.addEventListener('keydown', () => input.classList.remove('empty-input')));
-
-
-/* zmianny w index.html:
- line35 <img class="hamburger burger" src="./images/icons/burger_menu.svg" alt="Burger menu">
- line36 <img class="hamburger burgerDark" src="./images/icons/burger_menu_dark.svg" alt="Burger menu">
-
- header.scss
- line28
-
-*/
