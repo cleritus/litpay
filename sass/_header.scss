@@ -25,19 +25,21 @@ header {
         padding: 30px 0;
       }
 
-      .burger {
+      .hamburger {
         display: none;
         height: 20px;
         width: 26px;
         cursor: pointer;
 
-        @media(max-width: 1024px) {
-          display: block;
-        }
-
         @media(max-width: 768px) {
           height: 20px;
           width: 26px;
+        }
+      }
+
+      .burger {
+        @media(max-width: 1024px) {
+          display: block;
         }
       }
     }

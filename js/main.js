@@ -11,7 +11,8 @@ $('li').on('click', function () {
 
 
 const header = document.querySelector('header');
-const burger = document.querySelector('.burger');
+const hamburger = document.querySelector('.hamburger');
+const burgerDark = document.querySelector('.burgerDark');
 const burgerExit = document.querySelector('.burger-exit');
 const modalBg = document.querySelector('.modal-bg');
 
@@ -20,17 +21,20 @@ const modalBg = document.querySelector('.modal-bg');
 $(document).on('scroll', function () {
   const scrollPosition = $(this).scrollTop();
   const headerHeight = $(header).outerHeight();
+  let isActive = 0;
 
-  if (scrollPosition > headerHeight / 2) {
+  if ((scrollPosition > headerHeight / 2) && (isActive === 0)) {
     $(header).addClass('activeHead');
-    burger.src = 'images/icons/burger_menu_dark.svg'
+    hamburger.style.display = 'none';
+    burgerDark.style.display = 'block';
+    isActive = 1;
   }
-
-  // Clear
 
   if (scrollPosition < headerHeight) {
     $(header).removeClass('activeHead');
-    burger.src = 'images/icons/burger_menu.svg';
+    hamburger.style.display = 'block';
+    burgerDark.style.display = 'none';
+    isActive = 0;
   }
 })
 
@@ -44,7 +48,7 @@ const closeMenu = () => {
   header.classList.remove('hideHead');
   modalBg.style.display = 'none';
 }
-burger.addEventListener('click', openMenu);
+hamburger.addEventListener('click', openMenu);
 burgerExit.addEventListener('click', closeMenu);
 
 // Error when empty input
@@ -88,3 +92,13 @@ const onSubmitForm = (e) => {
 submitBtn.addEventListener('click', onSubmitForm);
 
 inputs.forEach(input => input.addEventListener('keydown', () => input.classList.remove('empty-input')));
+
+
+/* zmianny w index.html:
+ line35 <img class="hamburger burger" src="./images/icons/burger_menu.svg" alt="Burger menu">
+ line36 <img class="hamburger burgerDark" src="./images/icons/burger_menu_dark.svg" alt="Burger menu">
+
+ header.scss
+ line28
+
+*/
