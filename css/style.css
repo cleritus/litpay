@@ -323,23 +323,23 @@ header .header-top {
   }
 }
 
-header .header-top .nav-primary .burger {
+header .header-top .nav-primary .hamburger {
   display: none;
   height: 20px;
   width: 26px;
   cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-  header .header-top .nav-primary .burger {
-    display: block;
+@media (max-width: 768px) {
+  header .header-top .nav-primary .hamburger {
+    height: 20px;
+    width: 26px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header .header-top .nav-primary .burger {
-    height: 20px;
-    width: 26px;
+    display: block;
   }
 }
 

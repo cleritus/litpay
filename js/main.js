@@ -1,36 +1,50 @@
+const header = document.querySelector('header');
+const hamburger = document.querySelector('.hamburger');
+const burgerDark = document.querySelector('.burgerDark');
+const burgerExit = document.querySelector('.burger-exit');
+const modalBg = document.querySelector('.modal-bg');
+const headerDisplayNone = $('.header-ul').css('display');
+
 // Nav - Scroll to section
 
 $('li').on('click', function () {
-  console.log($(this).attr('class'));
   const sectionName = $(this).attr('class');
+  modalBg.style.display = 'none';
+  $(header).removeClass('activeHead');
+  header.classList.remove('hideHead');
+
 
   $('body, html').animate({
-    scrollTop: $(`[data-section = ${sectionName}]`).offset().top + 80
+    scrollTop: $(`[data-section = ${sectionName}]`).offset().top + 40
   })
+
+
 });
-
-
-const header = document.querySelector('header');
-const burger = document.querySelector('.burger');
-const burgerExit = document.querySelector('.burger-exit');
-const modalBg = document.querySelector('.modal-bg');
 
 // Stick nav on desktop
 
 $(document).on('scroll', function () {
   const scrollPosition = $(this).scrollTop();
   const headerHeight = $(header).outerHeight();
+  let isActive = 0;
+  const headerDisplayNone = $('.header-ul').css('display');
 
-  if (scrollPosition > headerHeight / 2) {
+  if ((scrollPosition > headerHeight / 2) && (isActive === 0)) {
     $(header).addClass('activeHead');
-    burger.src = 'images/icons/burger_menu_dark.svg'
+    hamburger.style.display = 'none';
+
+    if (headerDisplayNone === 'none') {
+      burgerDark.style.display = 'block';
+    }
+
+    isActive = 1;
   }
 
-  // Clear
-
-  if (scrollPosition < headerHeight) {
+  if (scrollPosition < headerHeight / 2) {
     $(header).removeClass('activeHead');
-    burger.src = 'images/icons/burger_menu.svg';
+    hamburger.style.display = 'block';
+    burgerDark.style.display = 'none';
+    isActive = 0;
   }
 })
 
@@ -44,7 +58,8 @@ const closeMenu = () => {
   header.classList.remove('hideHead');
   modalBg.style.display = 'none';
 }
-burger.addEventListener('click', openMenu);
+hamburger.addEventListener('click', openMenu);
+burgerDark.addEventListener('click', openMenu);
 burgerExit.addEventListener('click', closeMenu);
 
 // Error when empty input
