@@ -7,18 +7,25 @@ const headerDisplayNone = $('.header-ul').css('display');
 
 // Nav - Scroll to section
 
+let sectionActive = '';
+
 $('li').on('click', function () {
   const sectionName = $(this).attr('class');
-  modalBg.style.display = 'none';
-  $(header).removeClass('activeHead');
-  header.classList.remove('hideHead');
+
+  if (sectionActive === sectionName) {
+    return console.log('You are in the section you click');
+  } else {
+    modalBg.style.display = 'none';
+    $(header).removeClass('activeHead');
+    header.classList.remove('hideHead');
 
 
-  $('body, html').animate({
-    scrollTop: $(`[data-section = ${sectionName}]`).offset().top + 40
-  })
+    $('body, html').animate({
+      scrollTop: $(`[data-section = ${sectionName}]`).offset().top + 40
+    })
 
-
+    sectionActive = sectionName;
+  }
 });
 
 // Stick nav on desktop
